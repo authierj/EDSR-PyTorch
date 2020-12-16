@@ -5,7 +5,7 @@
 4. [Demo](#demo)
 5. [Introduction](#introduction)
 6. [Baseline](#baseline)
-7. [Method & experiments](#method-&-experiments)
+7. [Method and experiments](#method-and-experiments)
 8. [Conclusion](#conclusion)
 
 
@@ -76,7 +76,7 @@ Our project is based on the [EDSR-PyTorch](https://github.com/thstkdgus35/EDSR-P
 There are two general aproaches for solving the super resolution problem. First you can interpolate your low resolution image using for example bicubic interpolation, and then run a convolutional neural network (CNN) on the interpolated images. Or you can add an upsampling block at the end of the CNN, which makes the network smaller and therefore faster. The EDSR model, which we also tested to see how the dataloaoding, training, testing, etc. works, uses the second approach. In this project both approches are tested, while using the first approach only for the simpler networks.
 
 
-## Method & experiments
+## Method and experiments
 
 For the training of the networks we use HR images, which we degrade with a simplified model including blurring, downsampling with bicubic interpolation and noise, to get paired training data (LR, HR). Then we train our network on a large datasets of images to try do the inverse process and reconstituing a HR image. In fact the network is trained to exctract high frequencies information from a low-frequency input.
 In the next lines we will look at the results of different networks on the benchmark datasets. Different techniques such as global residual connection, residual blocks or channel attention were used to try to improve the performance of the networks. We will also look at the importance of the network depth and width for the performance.
