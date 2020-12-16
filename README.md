@@ -138,7 +138,7 @@ LeakyReLU and PReLU are used to solve the problem of the "dying ReLU", due to th
  
  ![](/figs/leakyvsprelu.png)
  
- First of all, notice that the results here are not as good as in the others experiments. This can be easily explained, due to an unfortunate error the patch size in this experiment is 196 and not 96 as in the other experiment, thus the parameters of the network are not updated as often as usual resulting in a less optimized network and therefore results not as good as in the other experiments.
+ First of all, notice that the results here are not as good as in the others experiments. This can be easily explained, due to an unfortunate error, the patch size in this experiment is 196 and not 96 as in the other experiment. Thus the parameters of the network are not updated as often as usual resulting in a less optimized network and therefore results not as good as in the other experiments.
  
  But we can still compare the performance of the networks and we clearly see that the results for leakyReLU and PReLU are better than for a classic ReLU activation function. The visual result is better too, however we would have expected the PReLU achieve better results than the leakyReLU due to the additional learing parameter 'a' but this does not seem to be the case.
 
