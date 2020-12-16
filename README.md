@@ -141,12 +141,13 @@ LeakyReLU and PReLU are used to solve the problem of the "dying ReLU", due to th
  
  But we can still compare the performance of the networks and we clearly see that the results for leakyReLU and PReLU are better than for a classic ReLU activation function. The visual result is better too, however we would have expected the PReLU achieve better results than the leakyReLU due to the additional learing parameter 'a' but this does not seem to be the case.
 
- **effect of deeper and wider network**
+
+ **Effect of deeper and wider network**
  
- Next, in task8, we explore the effect of the network size on the performance. We separatly double and quadruple number of layers(depth) and the number of feature maps(width) of our network.
+In task8, we explore the effect of the network size on the performance. We separatly double and quadruple the number of layers(depth) and the number of feature maps(width) of our network.
  
  ![](/figs/task8_comparison.png)
-The enlargement of the depth and with can improve the performance of the SRCNN significantly (See change from (8,64) to (16,64) and (8,96)). But for even bigger widths the performance stagnates (8,128). And for even bigger depth the performance gets even worse. This is probably due to overfitting to the training data as you can see in the figures below.
+The enlargement of the depth and width can improve the performance of the SRCNN significantly (See change from (8,64) to (16,64) and (8,96)). But for even bigger widths the performance stagnates (8,128). And for even bigger depth the performance gets even worse. This is probably due to overfitting to the training data as you can see in the figures below.
  ![](/figs/task8_32_64.PNG)
 
  **loss functions: L1 vs L2 vs perceptual loss**
