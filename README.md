@@ -1,9 +1,11 @@
 ## Contents
-1. [Installation](#installation)
-2. [Dependencies](#dependencies)
-3. [Datasets](#datasets)
-4. [Pre-trained models](#pre-trained-models)
-5. [Demo](#demo)
+1. [Code Documentation] (#code-documentation)
+1.1 [Installation](#installation)
+1.2 [Dependencies](#dependencies)
+1.3 [Datasets](#datasets)
+1.4 [Pre-trained models](#pre-trained-models)
+1.5 [Demo](#demo)
+
 6. [Introduction](#introduction)
 7. [Baseline](#baseline)
 8. [Method & experiments](#method-&-experimentsd)
