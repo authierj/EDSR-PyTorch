@@ -20,7 +20,7 @@ class SRCNN(nn.Module):
         # define body module
         m_body = [
             common.ResBlock(
-                conv, n_feats, kernel_size, bn=False, act=act # bn = True for batch normalization
+                conv, n_feats, kernel_size, bn=True, act=act # bn = True for batch normalization
             ) for _ in range(n_resblocks - 2)
         ]
 
@@ -35,13 +35,13 @@ class SRCNN(nn.Module):
         self.tail = nn.Sequential(*m_tail)
 
     def forward(self, x):
-        x = self.sub_mean(x)
+#        x = self.sub_mean(x)
         x = self.head(x)
 
         res = self.body(x)
         res += x
 
         x = self.tail(res)
-        x = self.add_mean(x)
+#        x = self.add_mean(x)
 
         return x

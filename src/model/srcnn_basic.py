@@ -13,7 +13,7 @@ class SRCNN_BASIC(nn.Module):
         n_feats = args.n_feats
         kernel_size = 3
         scale = args.scale[0]
-        act = nn.ReLU(True)
+        act = nn.ReLU()
 
         def basic_block(in_channels, out_channels, act):
             return common.BasicBlock(
@@ -26,7 +26,7 @@ class SRCNN_BASIC(nn.Module):
 
         #define body module
         m_body = []
-        m_body.append(basic_block(args.n_colors, n_feats, act))
+        m_body.append(basic_block(n_feats, n_feats, act))
         for _ in range(n_resblocks - 2):
             m_body.append(basic_block(n_feats, n_feats, act))
 
