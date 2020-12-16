@@ -180,7 +180,7 @@ The enlargement of the depth and width can improve the performance of the SRCNN 
 | | 9 | L2(mse) | 37.533 dB | 33.160 dB | 31.054 dB | 31.902 dB |
 | | 11 | perceptual loss |  34.653 dB | 31.025 dB | 28.457 dB | 29.958 dB |
 
-Notice that the Task 10 is not in the table, the results of task 10 are in '''experiment/task10'''. The network stoped trainning after 70 epochs probably due to time limitations or a technical problem and it makes no sense to compare a network after 70 epochs with the other ones. Unfortunately we did not have the time to solve this issue.
+Notice that the Task 10 is not in the table, the results of task 10 are in '''experiment/task10'''. The network stoped trainning after 70 epochs probably due to time limitations or a technical problem. As it makes no sense to compare a network after 70 epochs with the other networks we did not put the intemediate results in the table. Unfortunately we did not have the time to solve this issue.
 
 ## Conclusion
 
