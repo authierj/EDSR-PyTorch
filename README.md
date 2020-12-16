@@ -159,7 +159,7 @@ The enlargement of the depth and width can improve the performance of the SRCNN 
  The L2 loss improves the performances significantly compared to the L1 loss. With perceptual loss the performance gets worse. This can be explained with the fact that the structures stay the same in the low resolution images even if they are only interpolated. In other words the perceptual loss looks more at the lower frequencies, where the goal of a SRCNN is to reproduce the high frequencies. Also noise majorly acts in the higher frequency range and therefore gets "ignored" by the perceptual loss.
 
 
-results in a table 
+**Results in a table** 
 
 | Model | task | description |  SET5 PSNR | Set14 PSNR | Urban100 PSNR | B100 PSNR |
 |  ---  |  ---  | ---       | ---  | ---        | ---  | ---        |
