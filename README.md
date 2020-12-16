@@ -147,7 +147,7 @@ LeakyReLU and PReLU are used to solve the problem of the "dying ReLU", due to th
 In task8, we explore the effect of the network size on the performance. We separatly double and quadruple the number of layers(depth) and the number of feature maps(width) of our network.
  
  ![](/figs/task8_comparison.png)
-The enlargement of the depth and width can improve the performance of the SRCNN significantly (See change from (8,64) to (16,64) and (8,96)). But for even bigger widths the performance stagnates (8,128). And for even bigger depth the performance gets even worse. If we look at the training performance we see that at epoch 280 the networks performance seems to suddenly get better both in loss and PSNR. This is a strange behavior which we found no explenation for because we didn't change the step size. Probably it is also the main reason for the bad performance of this network.
+The enlargement of the depth and width can improve the performance of the SRCNN significantly (See change from (8,64) to (16,64) and (8,96)). But for even bigger widths the performance stagnates (8,128). And for even bigger depth the performance gets even worse. If we look at the training performance we see that at epoch 280 the networks performance seems to suddenly get better both in loss and PSNR. This is a strange behavior which we found no explanation for. It is probably the main reason for the bad performance of this network.
  ![](/figs/task8_32_64.PNG)
 
  **loss functions: L1 vs L2 vs perceptual loss**
@@ -180,7 +180,15 @@ The enlargement of the depth and width can improve the performance of the SRCNN 
 | | 9 | L2(mse) | 37.533 dB | 33.160 dB | 31.054 dB | 31.902 dB |
 | | 11 | perceptual loss |  34.653 dB | 31.025 dB | 28.457 dB | 29.958 dB |
 
+Notice that the Task 10 is not in the table, the results of task 10 are in '''experiment/task10'''. The network stoped trainning after 70 epochs probably due to time limitations or a technical problem and it makes no sense to compare a network after 70 epochs with the other ones. Unfortunately we did not have the time to solve this issue.
 
 ## Conclusion
 
-We see that we can allready achieve some fairly good results with a very simple and small CNN with only 3 layers. Using an upsamling block at the end of the network instead of interpolation at the beginning the network improves the computational performance of the network. Increasing the depth of the network increase drastically the performance but for very deep network it seems that the performance is stagnating, thus we imagine that it could be benefitial to use residual blocks and to add global residual connections to activate the deeper networks porperly. With loss functions, activation functions and batch normalisation you can tune your network, but they don't seem to have a major effect. Further one could try to combine L2 loss with perceptual loss to increase the PSNR score while still maintaining details in the SR image.
+We see that we can already achieve some fairly good results with a very simple and small CNN with only 3 layers. Using an upsamling block at the end of the network instead of interpolation at the beginning the network improves the computational performance of the network. Increasing the depth of the network increase drastically the performance but for very deep network it seems that the performance is stagnating, thus we imagine that it could be benefitial to use residual blocks and to add global residual connections to activate the deeper networks properly. With activation functions and batch normalisation you can tune your network, but they don't seem to have a major effect. Further one could try to combine L2 loss with perceptual loss to increase the PSNR score while still maintaining details in the SR image.
+
+## References
+1. Chao Dong, Chen Change Loy, Kaiming He, and Xiaoou Tang. Image super- resolution using deep convolutional networks.
+2. Jiwon Kim, Jung Kwon Lee, and Kyoung Mu Lee. Accurate image super- resolution using very deep convolutional networks.
+3. Christian Ledig, Lucas Theis, Ferenc Husz ́ar, Jose Caballero, Andrew Cun- ningham, Alejandro Acosta, Andrew Aitken, Alykhan Tejani, Johannes Totz, Zehan Wang, et al. Photo-realistic single image super-resolution using a generative adversarial network.
+4. Brandon Yang, Gabriel Bender, Quoc V Le, and Jiquan Ngiam. Condconv: Conditionally parameterized convolutions for efficient inference.
+5. Yulun Zhang, Kunpeng Li, Kai Li, Lichen Wang, Bineng Zhong, and Yun Fu. Image super-resolution using very deep residual channel attention networks.
