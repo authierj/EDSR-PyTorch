@@ -147,7 +147,7 @@ LeakyReLU and PReLU are used to solve the problem of the "dying ReLU", due to th
 In task8, we explore the effect of the network size on the performance. We separatly double and quadruple the number of layers(depth) and the number of feature maps(width) of our network.
  
  ![](/figs/task8_comparison.png)
-The enlargement of the depth and width can improve the performance of the SRCNN significantly (See change from (8,64) to (16,64) and (8,96)). But for even bigger widths the performance stagnates (8,128). And for even bigger depth the performance gets even worse. This is probably due to overfitting to the training data as you can see in the figures below.
+The enlargement of the depth and width can improve the performance of the SRCNN significantly (See change from (8,64) to (16,64) and (8,96)). But for even bigger widths the performance stagnates (8,128). And for even bigger depth the performance gets even worse. If we look at the training performance we see that at epoch 280 the networks performance seems to suddenly get better both in loss and PSNR. This is a strange behavior which we found no explenation for because we didn't change the step size. Probably it is also the main reason for the bad performance of this network.
  ![](/figs/task8_32_64.PNG)
 
  **loss functions: L1 vs L2 vs perceptual loss**
