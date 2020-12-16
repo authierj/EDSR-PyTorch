@@ -36,7 +36,7 @@ We used the [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) dataset  to train
 The models used for the experiments can be found in [experiment](/experiment) under <name_model>/model_best.pt
 
 ## Demo
-To test all our models on the Urban100 dataset, run the ```run_networks```file.
+To test all our models on the Urban100 dataset, run the ```run_networks.sh``` file.
 
 You can test the SR resolution alogrithms with your images. Place your image in the ```test```folder. The network supports .png and .jpeg files
 Run the following line in ```src```
