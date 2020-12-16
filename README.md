@@ -100,7 +100,7 @@ As expected for bigger scales the performance is worse. This is due to the fact 
 For tasks 1-3 the input of the network is a bicubic intepolated LR image, the image is interpolated to have the same number of pixels as the HR image.
 
 In task 1 we implemented a simple 3 layers CNN network.
-In task 2 we add a global residual connection (grc) to the network of task 1, the result looks like the one in the picture above.
+In task 2 we add a global residual connection (grc) to the network of task 1, the result looks like the picture above.
 In task 3 we increase the depth of the network of task 2, we have now a 8 layers SRCNN
 
 ![](/figs/task1_3_comparison.png)
