@@ -81,8 +81,13 @@ There are two general aproaches for solving the super resolution problem. First 
 For the training of the networks we use HR images, which we degrade with a simplified model including blurring, downsampling with bicubic interpolation and noise, to get paired training data (LR, HR). Then we train our network on a large datasets of images to try do the inverse process and reconstituing a HR image. In fact the network is trained to exctract high frequencies information from a low-frequency input.
 In the next lines we will look at the results of different networks on the benchmark datasets. Different techniques such as global residual connection, residual blocks or channel attention were used to try to improve the performance of the networks. We will also look at the importance of the network depth and width for the performance.
 
-We use 64 feature maps, activation-function ReLu, L1 loss, no batch normalitation, scaling factor 2 and a patchsize of 96 for all Networks unless stated different. We also tested some networks for other scales and patchsize combinations: (scale 3, patchsize 144) and (scale 4, patchsize 192). We show the results of these settings exemplary for the first task and omit them for the rest of the networks.
-![](/figs/task1_comparison.png)
+We use 64 feature maps, activation-function ReLu, L1 loss, no batch normalitation, scaling factor 2 and a patchsize of 96 for all Networks unless stated different. 
+
+**Scale**
+
+We also tested some networks for other scales and patchsize combinations: (scale 3, patchsize 144) and (scale 4, patchsize 192). We show the results of these settings exemplary for the first task and omit them for the rest of the networks.
+![](/figs/task1_comparison_augmentation.png)
+As expected for bigger scales the performance is worse. This is due to the fact that with bigger scales less details(also generally less information) is stored in the LR immages. This also holds for all other networks in this project but is only exemplary shown for the smallest and most simple network from task 1 which consists of 3 convolutional layers only.
 
 **Networks with a bicubic interpolated input**
 
@@ -173,4 +178,4 @@ results in a table
 
 ## Conclusion
 
-We see that we can allready achieve some fairly good results with a very simple and small CNN with only 3 layers. Using an upsamling block at the end of the network instead of interpolation at the beginning the network improves the computational performance of the network. Increasing the depth of the network increase drastically the performance but for very deep network it seems that the performance is stagnating, thus we imagine that it could be benefitial to use residual blocks and to add global residual connections to activate the deeper networks porperly. With loss functions, activation functions and batch normalisation you can tune your network, but they don't seem to have a major effect. By Further one could try to combine L1 loss with perceptual loss to increase the PSNR score while still maintaining details in the SR image.
+We see that we can allready achieve some fairly good results with a very simple and small CNN with only 3 layers. Using an upsamling block at the end of the network instead of interpolation at the beginning the network improves the computational performance of the network. Increasing the depth of the network increase drastically the performance but for very deep network it seems that the performance is stagnating, thus we imagine that it could be benefitial to use residual blocks and to add global residual connections to activate the deeper networks porperly. With loss functions, activation functions and batch normalisation you can tune your network, but they don't seem to have a major effect. Further one could try to combine L1 loss with perceptual loss to increase the PSNR score while still maintaining details in the SR image.
