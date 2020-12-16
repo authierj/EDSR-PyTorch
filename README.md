@@ -172,4 +172,4 @@ results in a table
 
 ## Conclusion
 
-
+You can allready achiev some fairly good results with a very simple and small CNN. We are starting with only 3 layers. By increasing the size of the network, both depth and width aswell as by adding residual connections, global and blockwise, you can improve the performance drasticly. With loss functions, activation functions and batch normalisation you can tune your network. But they have a minor effect. By using an upsamling block at the end of the network instead of interpolation at the beginning the network gets much faster. Further one could try to combine L2 loss with perceptual loss to suppress the noise while still maintaining details in the SR image.
