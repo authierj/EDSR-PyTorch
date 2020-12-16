@@ -2,6 +2,17 @@
 source /usr/itetnas04/data-scratch-01/dlim_04hs20/data/conda/etc/profile.d/conda.sh
 conda activate DLIM_project
 
+#python main.py --model BICUBIC_INPUT_MODEL_GRC --scale 2 --patch_size 96 --n_resblock 8 --data_test Set14 --save task3set14 --save_gt --save_results --reset --test_only --pre_train ../experiment/task3_bicubic_input_model_grcx2_8/model/model_best.pt 
+
+#python main.py --model BICUBIC_INPUT_MODEL_GRC --scale 2 --patch_size 96 --n_resblock 8 --data_test Urban100 --save task3urban --save_gt --save_results --reset --test_only --pre_train ../experiment/task3_bicubic_input_model_grcx2_8/model/model_best.pt
+
+python main.py --model BICUBIC_INPUT_MODEL_GRC --scale 2 --patch_size 96 --n_resblock 3 --data_test Urban100 --save task2urban --save_gt --save_results --reset --test_only --pre_train ../experiment/task2_bicubic_input_model_grcx2_3/model/model_best.pt
+
+#python main.py --model BICUBIC_INPUT_MODEL --scale 2 --patch_size 96 --n_resblock 3 --data_test Urban100 --save task1urbanx2 --save_gt --save_results --reset --test_only --pre_train ../experiment/task1_bicubic_input_modelx2_3/model/model_best.pt
+
+#python main.py --model BICUBIC_INPUT_MODEL --scale 3 --patch_size 144 --n_resblock 3 --data_test Urban100 --save task1urbanx3 --save_gt --save_results --reset --test_only --pre_train ../experiment/task1_bicubic_input_modelx3_3/model/model_best.pt
+
+#python main.py --model BICUBIC_INPUT_MODEL --scale 4 --patch_size 192 --n_resblock 3 --data_test Urban100 --save task1urbanx4 --save_gt --save_results --reset --test_only --pre_train ../experiment/task1_bicubic_input_modelx4_3/model/model_best.pt
 
 python main.py --model SRCNN --scale 2 --patch_size 96 --n_resblock 8 --loss 1*L1 --save task6 --save_results --reset --save_gt
 
