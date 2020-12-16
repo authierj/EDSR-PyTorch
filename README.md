@@ -128,12 +128,12 @@ From this point, all our networks add functionalities to the 8-layers SRCNN netw
 
  **Leaky ReLU and PreLU**
  
-In task 7 we look at the effects of the activation function, as default activation function we used ReLU(x) = max(x,0) and we compare the performance of of RelU with LeakyReLU and the parametric ReLu, PReLU. 
+In task 7 we look at the effects of the activation function. As default activation function we used ReLU(x) = max(x,0) and we compare the performance of of RelU with LeakyReLU and the parametric ReLu, PReLU. 
  
 ![alt-text-1](/figs/leakyrelu.png)![alt-text-2](/figs/prelu.png)
 
 The parameter 'a' in the PReLU activation is a learnable parameter for each feature map.
-LeakyReLU and PReLU are used to solve the problem of the "dying ReLU", due to the zero value and thus zero slope of the negative side of ReLU so once a neuron gets negative it "dies" and does not contribute anymore to the imporvement of the network. LeakyReLU and PReLU try to solve this problem by having a small positiv gradient on the negative side and thus they will not "kill" neurons.
+LeakyReLU and PReLU are used to solve the problem of the "dying ReLU", due to the zero value and thus zero slope of the negative side of ReLU, so once a neuron gets negative it "dies" and does not contribute anymore to the improvement of the network. LeakyReLU and PReLU try to solve this problem by having a small positiv gradient on the negative side and thus neurons will not be "killed".
  
  ![](/figs/leakyvsprelu.png)
  
