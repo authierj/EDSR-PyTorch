@@ -178,7 +178,6 @@ results in a table
 | | | n_channels 96 | 37.712 dB | 33.273 dB | 31.333 dB | 31.997 dB |
 | | | n_channels 128 | 37.760 dB | 33.331 dB | 31.478 dB | 32.023 dB |
 | | 9 | L2(mse) | 37.533 dB | 33.160 dB | 31.054 dB | 31.902 dB |
-| | 10 | channel attention | 30.119 dB | 28.830 dB | 26.311 dB | 32.215 dB |
 | | 11 | perceptual loss |  34.653 dB | 31.025 dB | 28.457 dB | 29.958 dB |
 
 
