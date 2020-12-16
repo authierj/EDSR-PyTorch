@@ -82,7 +82,7 @@ For the training of the networks we use HR images, which we degrade with a simpl
 
 In the next lines we will look at the results of different networks on the benchmark datasets. Different techniques such as global residual connection, residual blocks or channel attention were used to try to improve the performance of the networks. We will also look at the importance of the network depth and width for the performance.
 
-We use 64 feature maps, activation-function ReLu, L1 loss, no batch normalitation, scaling factor 2 and a patchsize of 96 for all Networks unless stated different. 
+We use 64 feature maps, activation-function ReLu, L1 loss, no batch normalization, scaling factor 2 and a patchsize of 96 for all Networks unless stated different. 
 
 
 **Scale**
