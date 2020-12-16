@@ -18,6 +18,6 @@ python main.py --test_only --save_results --data_test Urban100  --pre_train ../e
 python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task8/scale2_8_96/modelcopy/model_best.pt --save task8_8_96urban --reset
 python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task8/scale2_16_64/modelcopy/model_best.pt --save task8_16_646urban --reset
 python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task8/scale2_32_64/modelcopy/model_best.pt --save task8_32_646urban --reset
-python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task9/modelcopy/model_best.pt --save task9urban --reset
+python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task9/scale2/modelcopy/model_best.pt --save task9urban --reset
 python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task10/model/model_best.pt --save task10urban --reset
-python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task11/modelcopy/model_best.pt --save task11urban --reset
+python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task11/model/model_best.pt --save task11urban --reset
