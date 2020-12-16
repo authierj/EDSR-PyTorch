@@ -84,11 +84,13 @@ In the next lines we will look at the results of different networks on the bench
 
 We use 64 feature maps, activation-function ReLu, L1 loss, no batch normalitation, scaling factor 2 and a patchsize of 96 for all Networks unless stated different. 
 
+
 **Scale**
 
 We also tested some networks for other scales and patchsize combinations: (scale 3, patchsize 144) and (scale 4, patchsize 192). We show the results of these settings exemplary for the first task and omit them for the rest of the networks.
 ![](/figs/task1_comparison_augmentation.png)
-As expected for bigger scales the performance is worse. This is due to the fact that with bigger scales less details(also generally less information) is stored in the LR immages. This also holds for all other networks in this project but is only exemplary shown for the smallest and most simple network from task 1 which consists of 3 convolutional layers only.
+As expected for bigger scales the performance is worse. This is due to the fact that with bigger scales less details (also generally less information) is stored in the LR images. This also holds for all other networks in this project but is only exemplary shown for the smallest and most simple network from task 1 which consists of 3 convolutional layers only.
+
 
 **Networks with a bicubic interpolated input**
 
@@ -106,7 +108,7 @@ We see that the global residual connection increases a little the performance of
 
 
  **Upsampling block added at the end of the network**
-In task 4 we do not interpolate the LR input image, but instead we add an upsampling block at the end of the network of task 4. We still have 8 layers and a grc as in task 3.
+In task 4 we do not interpolate the LR input image, but instead we add an upsampling block at the end of the network of task 4. We still have 8 layers and a grc as in task 3. This does not improve the quality of the SR images, but this reduce significantly the computational complexity of the problem thank to the smaller size of the input data. 
  
 From this point, all our networks add functionalities to the 8-layers SRCNN network with an upsampling block, the one of task 4, thus we will always compare our results with this network.
 
