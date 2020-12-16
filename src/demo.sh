@@ -70,6 +70,17 @@ python main.py --model SRCNN --scale 2 --data_test Set14 --patch_size 96 --n_res
 ###############################################################################################################################
 
 
+#python main.py --model SRCNN_BASIC --scale 2 --patch_size 96 --n_resblock 8 --save task4 --save_gt --save_results --reset
+
+#python main.py --model SRCNN_BASIC --scale 2 --patch_size 96 --n_resblock 8 --data_test Set5 --save task4set5--save_gt --save_results --reset --test_only --pre_train ../experiment/task4/model/model_best.pt
+
+#python main.py --model SRCNN_BASIC --scale 2 --patch_size 96 --n_resblock 8 --data_test Set14 --save task4set14 --save_gt --save_results --reset --test_only --pre_train ../experiment/task4/model/model_best.pt
+
+python main.py --model SRCNN_BASIC --scale 2 --patch_size 96 --n_resblock 8 --data_test B100 --save task4b100 --save_gt --save_results --reset --test_only --pre_train ../experiment/task4/model/model_best.pt
+
+
+
+
 # EDSR baseline model (x2) + JPEG augmentation
 
 #python main.py --model EDSR  --scale 2 --patch_size 96 --save edsr_baseline_x2 --reset

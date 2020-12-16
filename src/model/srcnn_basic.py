@@ -24,11 +24,12 @@ class SRCNN_BASIC(nn.Module):
         # define head module
         m_head = [conv(args.n_colors, n_feats, kernel_size)]
 
-        #define body module
-        m_body = []
-        m_body.append(basic_block(n_feats, n_feats, act))
-        for _ in range(n_resblocks - 2):
-            m_body.append(basic_block(n_feats, n_feats, act))
+        m_body = [
+            common.BasicBlock(
+                conv, n_feats, n_feats, kernel_size, bias=False, bn=False, act=act
+            )for _ in range(n_resblocks - 2)
+        ]
+
 
         # define tail module
         m_tail = [
