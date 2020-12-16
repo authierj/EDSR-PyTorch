@@ -2,6 +2,73 @@
 source /usr/itetnas04/data-scratch-01/dlim_04hs20/data/conda/etc/profile.d/conda.sh
 conda activate DLIM_project
 
+#python main.py --model BICUBIC_INPUT_MODEL_GRC --scale 2 --patch_size 96 --n_resblock 8 --data_test Set14 --save task3set14 --save_gt --save_results --reset --test_only --pre_train ../experiment/task3_bicubic_input_model_grcx2_8/model/model_best.pt 
+
+#python main.py --model BICUBIC_INPUT_MODEL_GRC --scale 2 --patch_size 96 --n_resblock 8 --data_test Urban100 --save task3urban --save_gt --save_results --reset --test_only --pre_train ../experiment/task3_bicubic_input_model_grcx2_8/model/model_best.pt
+
+python main.py --model BICUBIC_INPUT_MODEL_GRC --scale 2 --patch_size 96 --n_resblock 3 --data_test Urban100 --save task2urban --save_gt --save_results --reset --test_only --pre_train ../experiment/task2_bicubic_input_model_grcx2_3/model/model_best.pt
+
+#python main.py --model BICUBIC_INPUT_MODEL --scale 2 --patch_size 96 --n_resblock 3 --data_test Urban100 --save task1urbanx2 --save_gt --save_results --reset --test_only --pre_train ../experiment/task1_bicubic_input_modelx2_3/model/model_best.pt
+
+#python main.py --model BICUBIC_INPUT_MODEL --scale 3 --patch_size 144 --n_resblock 3 --data_test Urban100 --save task1urbanx3 --save_gt --save_results --reset --test_only --pre_train ../experiment/task1_bicubic_input_modelx3_3/model/model_best.pt
+
+#python main.py --model BICUBIC_INPUT_MODEL --scale 4 --patch_size 192 --n_resblock 3 --data_test Urban100 --save task1urbanx4 --save_gt --save_results --reset --test_only --pre_train ../experiment/task1_bicubic_input_modelx4_3/model/model_best.pt
+
+python main.py --model SRCNN --scale 2 --patch_size 96 --n_resblock 8 --loss 1*L1 --save task6 --save_results --reset --save_gt
+
+
+#python main.py --model BICUBIC_INPUT_MODEL --scale 2 --patch_size 96 --n_resblock 3 --batch_norm false --save task1_bicubic_input_modelx2_3 --save_gt --save_results --reset
+
+#python main.py --model BICUBIC_INPUT_MODEL --scale 3 --patch_size 144 --n_resblock 3 --batch_norm false --save task1_bicubic_input_modelx3_3 --save_gt --save_results --reset
+
+#python main.py --model BICUBIC_INPUT_MODEL --scale 4 --patch_size 192 --n_resblock 3 --batch_norm false --save task1_bicubic_input_modelx4_3 --save_gt --save_results --reset
+
+
+#python main.py --model BICUBIC_INPUT_MODEL_GRC --scale 2 --patch_size 96 --n_resblock 3 --batch_norm false --save task2_bicubic_input_model_grcx2_3 --save_gt --save_model --save_results --reset
+
+#python main.py --model BICUBIC_INPUT_MODEL_GRC --scale 3 --patch_size 144 --n_resblock 3 --batch_norm false --save task2_bicubic_input_model_grcx3_3 --save_gt --save_results --reset
+
+#python main.py --model BICUBIC_INPUT_MODEL_GRC --scale 4 --patch_size 192 --n_resblock 3 --batch_norm false --save task2_bicubic_input_model_grcx4_3 --save_gt --save_results --reset
+
+
+#python main.py --model BICUBIC_INPUT_MODEL_GRC --scale 2 --patch_size 96 --n_resblock 8 --batch_norm false --save task3_bicubic_input_model_grcx2_8_test_only --save_gt --save_results --reset 
+
+#python main.py --model BICUBIC_INPUT_MODEL_GRC --scale 3 --patch_size 144 --n_resblock 8 --batch_norm false --save task3_bicubic_input_model_grcx3_8 --save_gt --save_results --reset
+
+#python main.py --model BICUBIC_INPUT_MODEL_GRC --scale 4 --patch_size 192 --n_resblock 8 --batch_norm false --save task3_bicubic_input_model_grcx4_8 --save_gt --save_results --reset
+
+
+#	test_only
+
+#python main.py --model BICUBIC_INPUT_MODEL --scale 2 --data_test Urban100 --patch_size 96 --n_resblock 3 --loss 1*L1 --save task1urbanx2 --save_gt --save_results --reset --test_only --pre_train ../experiment/task1_bicubic_input_modelx2_3/model/model_best.pt
+
+#python main.py --model BICUBIC_INPUT_MODEL --scale 3 --data_test Urban100 --patch_size 144 --n_resblock 3 --loss 1*L1 --save task1urbanx3 --save_gt --save_results --reset --test_only --pre_train ../experiment/task1_bicubic_input_modelx3_3/model/model_best.pt
+
+#python main.py --model BICUBIC_INPUT_MODEL_GRC --scale 2 --data_test Urban100 --patch_size 96 --n_resblock 3 --loss 1*L1 --save task2urban --save_gt --save_results --reset --test_only --pre_train ../experiment/task2_bicubic_input_model_grcx2_3/model/model_best.pt
+
+#python main.py --model BICUBIC_INPUT_MODEL_GRC --scale 2 --data_test Set14 --patch_size 96 --n_resblock 8 --loss 1*L1 --save task3set14 --save_gt --save_results --reset --test_only --pre_train ../experiment/task3_bicubic_input_model_grcx2_8/model/model_best.pt
+
+python main.py --model SRCNN --scale 2 --data_test Urban100 --patch_size 96 --n_resblock 8 --loss 1*L1 --save task6urban --save_gt --save_results --reset --test_only --pre_train ../experiment/task6/model/model_best.pt
+
+python main.py --model SRCNN --scale 2 --data_test Set5 --patch_size 96 --n_resblock 8 --loss 1*L1 --save task6set5 --save_gt --save_results --reset --test_only --pre_train ../experiment/task6/model/model_best.pt
+
+python main.py --model SRCNN --scale 2 --data_test Set14 --patch_size 96 --n_resblock 8 --loss 1*L1 --save task6set14 --save_gt --save_results --reset --test_only --pre_train ../experiment/task6/model/model_best.pt
+
+#python main.py --model SRCNN_BASIC --scale 2 --data_test Urban100 --patch_size 96 --n_resblock 8 --loss 1*L1 --n_feats 128 --save task8urban128 --save_gt --save_results --reset --test_only --pre_train ../experiment/task8_srcnn_basicx2_8_128/modelcopy/model_best.pt
+
+#python main.py --model SRCNN_BASIC --scale 2 --data_test Urban100 --patch_size 96 --n_resblock 8 --loss 1*MSE --save task9urban --save_gt --save_results --reset --test_only --pre_train ../experiment/task9_srcnn_basicx2_mse/modelcopy/model_best.pt
+
+#python main.py --model SRCNN_BASIC --scale 2 --data_test Urban100 --patch_size 96 --n_resblock 8 --loss 1*VGG54 --save task11urban --save_gt --save_results --reset --test_only --pre_train ../experiment/task11_srcnn_basicx2_vgg/model/model_best.pt
+
+
+#python main.py --model BICUBIC_INPUT_MODEL --scale 4 --data_test Set5 --patch_size 192 --n_resblock 3 --batch_norm false --save task1_bicubic_input_modelx4_3_set5 --save_gt --save_results --reset --test_only --pre_train ../experiment/task1_bicubic_input_modelx4_3/model/model_best.pt
+
+#python main.py --model BICUBIC_INPUT_MODEL --scale 3 --data_test Set14 --patch_size 144 --n_resblock 3 --batch_norm false --save task1_bicubic_input_modelx3_3_set14 --save_gt --save_results --reset --test_only --pre_train ../experiment/task1_bicubic_input_modelx3_3/model/model_best.pt
+
+
+
+###############################################################################################################################
+
 
 #python main.py --model SRCNN_BASIC --scale 2 --patch_size 96 --n_resblock 8 --save task4 --save_gt --save_results --reset
 
@@ -17,7 +84,8 @@ python main.py --model SRCNN_BASIC --scale 2 --patch_size 96 --n_resblock 8 --da
 # EDSR baseline model (x2) + JPEG augmentation
 
 #python main.py --model EDSR  --scale 2 --patch_size 96 --save edsr_baseline_x2 --reset
-#python main.py --model EDSR --scale 2 --patch_size 96 --save edsr_baseline_x2 --reset --data_train DIV2K+DIV2K-Q75 --data_test DIV2K+DIV2K-Q75
+
+python main.py --model BICUBIC_INPUT_MODEL_GRC --scale 2 --patch_size 96 --n_resblock 3 --save bicubic_input_model_grcx2 --save_gt --save_results --reset
 
 # EDSR baseline model (x3) - from EDSR baseline model (x2)
 #python main.py --model EDSR --scale 3 --patch_size 144 --save edsr_baseline_x3 --reset --pre_train [pre-trained EDSR_baseline_x2 model dir]
@@ -70,4 +138,5 @@ python main.py --model SRCNN_BASIC --scale 2 --patch_size 96 --n_resblock 8 --da
 #python main.py --template RCAN --save RCAN_BIX4_G10R20P48 --scale 4 --reset --save_results --patch_size 192 --pre_train ../experiment/model/RCAN_BIX2.pt
 # RCAN_BIX8_G10R20P48, input=48x48, output=384x384
 #python main.py --template RCAN --save RCAN_BIX8_G10R20P48 --scale 8 --reset --save_results --patch_size 384 --pre_train ../experiment/model/RCAN_BIX2.pt
+
 

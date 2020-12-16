@@ -151,6 +151,7 @@ class checkpoint():
             filename = self.get_path(
                 'results-{}'.format(self.args.data_test[0]),
                 '{}_x{}_'.format(filename, scale)
+              
             )
 
             postfix = ('SR', 'LR', 'HR')
