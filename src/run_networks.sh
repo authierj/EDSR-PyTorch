@@ -31,7 +31,7 @@ python main.py --model SRCNN --scale 2 --patch_size 96 --n_resblock 8 --loss 1*L
 #python main.py --model BICUBIC_INPUT_MODEL_GRC --scale 4 --patch_size 192 --n_resblock 3 --batch_norm false --save task2_bicubic_input_model_grcx4_3 --save_gt --save_results --reset
 
 
-#python main.py --model BICUBIC_INPUT_MODEL_GRC --scale 2 --patch_size 96 --n_resblock 8 --batch_norm false --save task3_bicubic_input_model_grcx2_8_test_only --save_gt --save_results --reset 
+#python main.py --model BICUBIC_INPUT_MODEL_GRC --scale 2 --patch_size 96 --n_resblock 8 --batch_norm false --save task3_bicubic_input_model_grcx2_8_test_only --save_results --reset
 
 #python main.py --model BICUBIC_INPUT_MODEL_GRC --scale 3 --patch_size 144 --n_resblock 8 --batch_norm false --save task3_bicubic_input_model_grcx3_8 --save_gt --save_results --reset
 
@@ -40,7 +40,27 @@ python main.py --model SRCNN --scale 2 --patch_size 96 --n_resblock 8 --loss 1*L
 
 #	test_only
 
-#python main.py --model BICUBIC_INPUT_MODEL --scale 2 --data_test Urban100 --patch_size 96 --n_resblock 3 --loss 1*L1 --save task1urbanx2 --save_gt --save_results --reset --test_only --pre_train ../experiment/task1_bicubic_input_modelx2_3/model/model_best.pt
+python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task1/scale2/model/model_best.pt  --save task1urbanx2--reset
+python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task1/scale3/model/model_best.pt  --save task1urbanx3--reset
+python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task1/scale4/model/model_best.pt  --save task1urbanx3--reset
+python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task2/model/model_best.pt --save task2urban --reset
+python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task3/model/model_best.pt --save task3urban --reset
+python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task4/model/model_best.pt --save task4urban --reset
+python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task5/model/model_best.pt --save task5urban --reset
+python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task6/model/model_best.pt --save task6urban --reset
+python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task7leaky/model/model_best.pt --save task7leakyurban --reset
+python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task7PreLU/model/model_best.pt --save task7preluurban --reset
+python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task8/scale2_8_128/model/model_best.pt --save task8_8_128urban --reset
+python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task8/scale2_8_96/model/model_best.pt --save task8_8_96urban --reset
+python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task8/scale2_8_96/model/model_best.pt --save task8_8_96urban --reset
+python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task8/scale2_16_64/model/model_best.pt --save task8_16_646urban --reset
+python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task8/scale2_32_64/model/model_best.pt --save task8_32_646urban --reset
+python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task9/model/model_best.pt --save task9urban --reset
+python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task10/model/model_best.pt --save task10urban --reset
+python main.py --test_only --save_results --data_test Urban100  --pre_train ../experiment/task11/model/model_best.pt --save task11urban --reset
+
+
+
 
 #python main.py --model BICUBIC_INPUT_MODEL --scale 3 --data_test Urban100 --patch_size 144 --n_resblock 3 --loss 1*L1 --save task1urbanx3 --save_gt --save_results --reset --test_only --pre_train ../experiment/task1_bicubic_input_modelx3_3/model/model_best.pt
 
