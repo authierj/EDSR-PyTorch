@@ -1,11 +1,22 @@
 #!/bin/bash
-source /usr/itetnas04/data-scratch-01/dlim_01hs20/data/conda/etc/profile.d/conda.sh
+source /usr/itetnas04/data-scratch-01/dlim_04hs20/data/conda/etc/profile.d/conda.sh
 conda activate DLIM_project
+
+
+#python main.py --model SRCNN_BASIC --scale 2 --patch_size 96 --n_resblock 8 --save task4 --save_gt --save_results --reset
+
+#python main.py --model SRCNN_BASIC --scale 2 --patch_size 96 --n_resblock 8 --data_test Set5 --save task4set5--save_gt --save_results --reset --test_only --pre_train ../experiment/task4/model/model_best.pt
+
+#python main.py --model SRCNN_BASIC --scale 2 --patch_size 96 --n_resblock 8 --data_test Set14 --save task4set14 --save_gt --save_results --reset --test_only --pre_train ../experiment/task4/model/model_best.pt
+
+python main.py --model SRCNN_BASIC --scale 2 --patch_size 96 --n_resblock 8 --data_test B100 --save task4b100 --save_gt --save_results --reset --test_only --pre_train ../experiment/task4/model/model_best.pt
+
+
 
 
 # EDSR baseline model (x2) + JPEG augmentation
 
-python main.py --model EDSR  --scale 2 --patch_size 96 --save edsr_baseline_x2 --reset
+#python main.py --model EDSR  --scale 2 --patch_size 96 --save edsr_baseline_x2 --reset
 #python main.py --model EDSR --scale 2 --patch_size 96 --save edsr_baseline_x2 --reset --data_train DIV2K+DIV2K-Q75 --data_test DIV2K+DIV2K-Q75
 
 # EDSR baseline model (x3) - from EDSR baseline model (x2)
