@@ -79,6 +79,7 @@ There are two general aproaches for solving the super resolution problem. First 
 ## Method and experiments
 
 For the training of the networks we use HR images, which we degrade with a simplified model including blurring, downsampling with bicubic interpolation and noise, to get paired training data (LR, HR). Then we train our network on a large datasets of images to try do the inverse process and reconstituing a HR image. In fact the network is trained to exctract high frequencies information from a low-frequency input.
+
 In the next lines we will look at the results of different networks on the benchmark datasets. Different techniques such as global residual connection, residual blocks or channel attention were used to try to improve the performance of the networks. We will also look at the importance of the network depth and width for the performance.
 
 We use 64 feature maps, activation-function ReLu, L1 loss, no batch normalitation, scaling factor 2 and a patchsize of 96 for all Networks unless stated different. 
