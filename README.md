@@ -108,9 +108,11 @@ We see that the global residual connection increases a little the performance of
 
 
  **Upsampling block added at the end of the network**
+ 
 In task 4 we do not interpolate the LR input image, but instead we add an upsampling block at the end of the network of task 4. We still have 8 layers and a grc as in task 3. This does not improve the quality of the SR images, but this reduce significantly the computational complexity of the problem thank to the smaller size of the input data. 
  
 From this point, all our networks add functionalities to the 8-layers SRCNN network with an upsampling block, the one of task 4, thus we will always compare our results with this network.
+
 
  **batch normalization and residual connection block**
  
