@@ -152,11 +152,11 @@ The enlargement of the depth and width can improve the performance of the SRCNN 
 
  **loss functions: L1 vs L2 vs perceptual loss**
  
- In task 9 we change the loss function to L2(mean squared error(mse)).
+ In task 9 we change the loss function to L2 (mean squared error).
  In task 11 we use visual geometry group network-based perceptual loss (VGG perceptual loss) with 54 layers (VGG54).
- While L1 and L2 loss are pixelwise losses, perceptual loss looks at the conservation of structures and therefor acts in the low frequency range. This is achieved with an additional CNN which extracts structures and is then applied to both the HR and SR images. The outputs are then compared.
+ While L1 and L2 loss are pixelwise losses, perceptual loss looks at the conservation of structures and therefore acts in the low frequency range. This is achieved with an additional CNN which extracts structures and is then applied to both the HR and SR images. The outputs are then compared.
  ![](/figs/task9_11_comparison.png)
- The L2 loss (or mean squared error (mse)) improves the performances significantly compared to the L1 loss. With perceptual loss the performance gets worse. This can be explained with the fact that the structures stay the same in the low resolution images even if they are only interpolated. In other words the perceptual loss looks more at the lower frequencies, where the goal of a SRCNN is to reproduce the high frequencies. Also noise majorly acts in the higher frequency range and therefore gets "ignored" by the perceptual loss.
+ The L2 loss improves the performances significantly compared to the L1 loss. With perceptual loss the performance gets worse. This can be explained with the fact that the structures stay the same in the low resolution images even if they are only interpolated. In other words the perceptual loss looks more at the lower frequencies, where the goal of a SRCNN is to reproduce the high frequencies. Also noise majorly acts in the higher frequency range and therefore gets "ignored" by the perceptual loss.
 
 
 results in a table 
