@@ -22,10 +22,9 @@ class Benchmark(srdata.SRData):
             list_hr.append(sorted(glob.glob(self.dir_hr + '/*.png')))
             list_lr.append(sorted(glob.glob(self.dir_lr + '/X{}/*.png'.format(s))))
 
-        return list_hr[0], list_lr  #here I have lists in a list [[...]]
+        return list_hr[0], list_lr #here lists in lists [[...]]
 
     def _set_filesystem(self, dir_data):
-
         self.apath = os.path.join(dir_data, 'super_resolution_aws/benchmark', self.args.data_test[0])
         self.dir_hr = os.path.join(self.apath, 'HR')
         self.dir_lr = os.path.join(self.apath, 'LR_bicubic')

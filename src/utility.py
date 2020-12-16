@@ -147,9 +147,11 @@ class checkpoint():
 
     def save_results(self, dataset, filename, save_list, scale):
         if self.args.save_results:
+            print(filename)
             filename = self.get_path(
                 'results-{}'.format(self.args.data_test[0]),
-                '{}_x{}_'.format(filename[0], scale)
+                '{}_x{}_'.format(filename, scale)
+              
             )
 
             postfix = ('SR', 'LR', 'HR')
