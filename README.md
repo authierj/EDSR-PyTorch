@@ -1,13 +1,12 @@
 ## Contents
 1. [Installation](#installation)
-2. [Dependencies](#dependencies)
-3. [Datasets](#datasets)
-4. [Pre-trained models](#pre-trained-models)
-5. [Demo](#demo)
-6. [Introduction](#introduction)
-7. [Baseline](#baseline)
-8. [Method & experiments](#method-&-experimentsd)
-9. [Conclusion](#conclusion)
+2. [Datasets](#datasets)
+3. [Pre-trained models](#pre-trained-models)
+4. [Demo](#demo)
+5. [Introduction](#introduction)
+6. [Baseline](#baseline)
+7. [Method & experiments](#method-&-experiments)
+8. [Conclusion](#conclusion)
 
 
 
@@ -37,6 +36,8 @@ We used the [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) dataset  to train
 The models used for the experiments can be found in [experiment](/experiment) under <name_model>/model_best.pt
 
 ## Demo
+To test all our models on the Urban100 dataset, run the ```run_networks```file.
+
 You can test the SR resolution alogrithms with your images. Place your image in the ```test```folder. The network supports .png and .jpeg files
 Run the following line in ```src```
 
@@ -57,7 +58,6 @@ To test the performance of a pre-trained network run the following lines in your
 cd src       # You are now in */EDSR-PyTorch/src
 python main.py --test_only --pre_train ../experiment/<name_network>/model/model_best.pt --data_test <benchmark dataset> --save <...> --save_results --reset
 ```
-
 
 # Project Documentation
 
