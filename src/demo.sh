@@ -62,7 +62,8 @@ python main.py --model SRCNN --scale 2 --data_test Set14 --patch_size 96 --n_res
 # EDSR baseline model (x2) + JPEG augmentation
 
 #python main.py --model EDSR  --scale 2 --patch_size 96 --save edsr_baseline_x2 --reset
-#python main.py --model EDSR --scale 2 --patch_size 96 --save edsr_baseline_x2 --reset --data_train DIV2K+DIV2K-Q75 --data_test DIV2K+DIV2K-Q75
+
+python main.py --model BICUBIC_INPUT_MODEL_GRC --scale 2 --patch_size 96 --n_resblock 3 --save bicubic_input_model_grcx2 --save_gt --save_results --reset
 
 # EDSR baseline model (x3) - from EDSR baseline model (x2)
 #python main.py --model EDSR --scale 3 --patch_size 144 --save edsr_baseline_x3 --reset --pre_train [pre-trained EDSR_baseline_x2 model dir]
